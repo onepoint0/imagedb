@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+  body
+    .container
+      form(action="/" method="post" enctype="multipart/form-data")
+        .row
+          .col-12
+            h2 #{name}'s Pug source code!
+          .col-4
+            input#upload-image-idx3-idx4(type="file" accept="image/*" name="image")
+          .col-4
+            | title: 
+            input(id='swatch-group-name' type='text', name='Group Name', value='')      
+          .col-4
+            input.btn.btn-success(type="submit" value="Save")
+      .row
+        .col-12
+          p This is the most recently uploaded file:
+        .col-12
+            img(alt='The Uploaded File', src='data:' + mimetype + ';base64,' + src)
